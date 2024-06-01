@@ -67,9 +67,9 @@ app.use("/truncate", TruncateLocalDB);
 
 
 
-app.use(express.static(__dirname + "/assets/aadhar_card_upload"));
-app.use(express.static(__dirname + "/assets/pan_card_upload"));
-app.use(express.static(__dirname + "/assets/profile_image_upload"));
+// app.use(express.static(__dirname + "/assets/aadhar_card_upload"));
+// app.use(express.static(__dirname + "/assets/pan_card_upload"));
+// app.use(express.static(__dirname + "/assets/profile_image_upload"));
 
 app.use(function (err, req, res, next) {
   // set locals, only providing error in development
