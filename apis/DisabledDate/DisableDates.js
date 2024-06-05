@@ -5,6 +5,7 @@ const reader = require("xlsx");
 const excelToJson = require("convert-excel-to-json");
 const fs = require("fs");
 const  axios  = require("axios");
+const { DefaultApiUrl } = require("../../Constant");
 
 // const axios_function_all_APIs_catch = require("../for_programmers/axios_function_all_APIs_catch");
 
@@ -25,7 +26,7 @@ router.post("/", async function (req, res, next) {
     console.log("ASdasdasdas",formData);
     
 
-    axios.post("https://apps.insecticidesindia.com:51200/RESTAdapter/DisableDates",{ 
+    axios.post(`${DefaultApiUrl}RESTAdapter/DisableDates`,{ 
       From_Date: formData.From_Date,
       To_Date: formData.To_Date 
   }).then((response)=>{

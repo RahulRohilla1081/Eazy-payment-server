@@ -4,6 +4,7 @@ var axios = require("axios");
 const https = require("https");
 // const LocalDB = require("../LocalDB");
 const LocalConnect = require("../LocalDB");
+const { DefaultApiUrl } = require("../Constant");
 
 /*   
 API url: - 
@@ -29,7 +30,8 @@ router.post("/", async function (req, res, next) {
     let config = {
       method: "post",
       maxBodyLength: Infinity,
-      url: "https://apps.insecticidesindia.com:51200/RESTAdapter/Bank_Integrationl/Vendor_Payment_Details",
+      url: `${DefaultApiUrl}RESTAdapter/Bank_Integrationl/Vendor_Payment_Details`,
+      // url: `https://apps.insecticidesindia.com:51200/RESTAdapter/Bank_Integrationl/Vendor_Payment_Details`,
       headers: {
         "Content-Type": "application/json",
         Authorization: "Basic V1NfUE9RX0RBU0g6aWlsQDIwMjQ=",
